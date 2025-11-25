@@ -10,4 +10,4 @@ Run the executable file created passing the URLs as arguments:
 
 `./scraper <url_1> <url_2>....<url_n>`
 
-Find the downloaded html files in your directory.
+Find the downloaded html files in your directory named as `output_n.html` where `n` is the number of the url.

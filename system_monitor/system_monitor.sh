@@ -138,6 +138,7 @@ menu() {
     while true; do
         echo ""
         echo "===== SYSTEM MONITOR MENU ====="
+        echo ""
         echo "1) View system status"
         echo "2) Set alert thresholds"
         echo "3) View logs"

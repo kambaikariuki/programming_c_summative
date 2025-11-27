@@ -31,9 +31,8 @@ void add_value(int **data, int *size);
 void modify_value(int *data, int size);
 void delete_value(int **data, int *size);
 
-/* ============================
-   Main Program
-   ============================ */
+   // Main Program
+
 int main() {
     int *data = NULL;
     int size = 0;
@@ -96,9 +95,10 @@ int main() {
     }
 }
 
-/* ============================
-   Menu Printing
-   ============================ */
+
+
+//   Menu Printing
+
 void print_menu() {
     printf("\n===== Dynamic Math & Data Engine =====\n");
     printf("1. Add value to dataset\n");
@@ -124,9 +124,7 @@ void print_operations_menu() {
     printf("Choose an operation: ");
 }
 
-/* ============================
-   Dataset Operations
-   ============================ */
+//     Dataset Operations
 void view_dataset(int *data, int size) {
     if (size == 0) {
         printf("Dataset is empty.\n");
@@ -209,9 +207,7 @@ void search_value(int *data, int size) {
     printf("Value not found.\n");
 }
 
-/* ============================
-   Dataset Editing
-   ============================ */
+//   Dataset Editing
 
 void add_value(int **data, int *size) {
     int new_val;

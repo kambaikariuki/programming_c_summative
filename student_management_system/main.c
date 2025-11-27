@@ -56,6 +56,7 @@ void saveToFile(){
   printf("Data saved succesfully.\n");
 }
 
+// calculate student gpa
 void computeGPA(Student *s) {
     if (s->gradeCount == 0) { s->gpa = 0; return; }
 
@@ -108,6 +109,7 @@ void addStudent() {
 }
 
 
+// Display all student records
 void displayStudents() {
     if (studentCount == 0) {
         printf("No students to display.\n");
@@ -136,7 +138,6 @@ int searchByName(char *name) {
             printf("Age: %d\n", students[i].age);
             printf("Course: %s\n", students[i].course);
             printf("GPA: %.2f\n", students[i].gpa);
-
             return i;   // student index
         }
     }
@@ -145,6 +146,7 @@ int searchByName(char *name) {
     return -1;
 }
 
+// input function to handle search by name
 void search(){
 
   char nameSearch[50];
@@ -155,6 +157,7 @@ void search(){
   nameSearch[strcspn(nameSearch, "\n")] = 0;
 
   searchByName(nameSearch);
+
 }
 
 
@@ -185,6 +188,7 @@ void updateStudent() {
         scanf("%f", &s->grade[i]);
     }
 
+  // calculates new gpa and updates it in the file
     computeGPA(s);
     saveToFile();
 }

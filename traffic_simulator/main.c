@@ -235,7 +235,7 @@ int main() {
 
     while (1) {
         printf("\n=== Smart Traffic Controller Menu ===\n");
-        printf("1. Run simulation (10s)\n");
+        printf("1. Run simulation \n");
         printf("2. Display current signal states\n");
         printf("3. Show traffic statistics\n");
         printf("4. Emergency override (force green)\n");

@@ -1,0 +1,40 @@
+===== Cycle 0 (1764270876) =====
+Lane 0 | State: GREEN  | Waiting: 0 | Processed: 2 | G=4s Y=2s R=2s
+Lane 1 | State: RED    | Waiting: 2 | Processed: 0 | G=4s Y=2s R=2s
+
+===== Cycle 1 (1764270877) =====
+Lane 0 | State: GREEN  | Waiting: 1 | Processed: 2 | G=3s Y=2s R=2s
+Lane 1 | State: RED    | Waiting: 3 | Processed: 0 | G=5s Y=2s R=2s
+
+===== Cycle 2 (1764270878) =====
+Lane 0 | State: GREEN  | Waiting: 2 | Processed: 2 | G=4s Y=2s R=2s
+Lane 1 | State: RED    | Waiting: 4 | Processed: 0 | G=5s Y=2s R=2s
+
+===== Cycle 3 (1764270879) =====
+Lane 0 | State: GREEN  | Waiting: 2 | Processed: 2 | G=4s Y=2s R=2s
+Lane 1 | State: RED    | Waiting: 5 | Processed: 0 | G=5s Y=2s R=2s
+
+===== Cycle 4 (1764270880) =====
+Lane 0 | State: GREEN  | Waiting: 3 | Processed: 2 | G=5s Y=2s R=2s
+Lane 1 | State: RED    | Waiting: 5 | Processed: 0 | G=5s Y=2s R=2s
+
+===== Cycle 5 (1764270881) =====
+Lane 0 | State: YELLOW | Waiting: 4 | Processed: 2 | G=5s Y=2s R=2s
+Lane 1 | State: GREEN  | Waiting: 0 | Processed: 6 | G=5s Y=2s R=2s
+
+===== Cycle 6 (1764270882) =====
+Lane 0 | State: YELLOW | Waiting: 5 | Processed: 2 | G=5s Y=2s R=2s
+Lane 1 | State: GREEN  | Waiting: 0 | Processed: 6 | G=2s Y=2s R=2s
+
+===== Cycle 7 (1764270883) =====
+Lane 0 | State: RED    | Waiting: 6 | Processed: 2 | G=5s Y=2s R=2s
+Lane 1 | State: YELLOW | Waiting: 0 | Processed: 6 | G=2s Y=2s R=2s
+
+===== Cycle 8 (1764270884) =====
+Lane 0 | State: RED    | Waiting: 7 | Processed: 2 | G=5s Y=2s R=2s
+Lane 1 | State: YELLOW | Waiting: 1 | Processed: 6 | G=3s Y=2s R=2s
+
+===== Cycle 9 (1764270885) =====
+Lane 0 | State: GREEN  | Waiting: 0 | Processed: 10 | G=5s Y=2s R=2s
+Lane 1 | State: RED    | Waiting: 1 | Processed: 6 | G=3s Y=2s R=2s
+

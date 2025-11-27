@@ -1,282 +1,192 @@
-This repository contains five software projects demonstrating concepts such as embedded simulation, shell scripting, data structures, dynamic memory, function pointers, file handling, and multi-threading.
+# Embedded Systems & Software Development Projects
 
-📌 Project 1: Smart Traffic Control and Monitoring System (C Simulation)
-Overview
+This repository contains five software projects demonstrating concepts such as **embedded simulation, shell scripting, data structures, dynamic memory, function pointers, file handling, and multi-threading**.
 
-This project simulates an intelligent multi-intersection traffic control system using the C programming language.
-It models traffic behavior using data structures, dynamic memory, timers, and simulated concurrency (using non-blocking time checks with clock() or time()).
+---
 
-This project replicates embedded system behavior without requiring physical hardware.
+## 📌 Project 1: Smart Traffic Control and Monitoring System (C Simulation)
 
-Key Functionalities
-1. Traffic Signal Simulation
+### Overview
+This project simulates an **intelligent multi-intersection traffic control system** using the C programming language.  
+It models traffic behavior using data structures, dynamic memory, timers, and simulated concurrency (using non-blocking time checks with `clock()` or `time()`).  
+This project replicates embedded system behavior **without requiring physical hardware**.
 
-Two or more intersections.
+### Key Functionalities
 
-Each intersection uses:
+1. **Traffic Signal Simulation**
+   - Two or more intersections.
+   - Each intersection uses:
+     - Red / Yellow / Green states
+     - Timers for each phase
+   - Dynamic adjustment of signal timing based on traffic density
 
-Red / Yellow / Green states.
+2. **Vehicle Detection Simulation**
+   - Vehicle presence simulated using:
+     - Keyboard input, OR
+     - Randomized vehicle arrival generator
+   - Vehicle counts stored using dynamic structures
 
-Timers for each phase.
+3. **Dynamic Memory Management**
+   - Each lane maintains a dynamic queue of vehicles using:
+     - `malloc()`
+     - `realloc()`
+     - `free()`
+   - Safe memory handling with null-checking
 
-Dynamic adjustment of signal timing based on traffic density.
+4. **Simulated Concurrency**
+   - Multiple "tasks" run concurrently by checking timestamps instead of using `sleep()`
+   - Example tasks:
+     - Traffic light control
+     - Vehicle addition/removal
+     - Data logging
+   - Allows “parallel” simulation inside a single-threaded C program
 
-2. Vehicle Detection Simulation
+5. **Logging & File Handling**
+   - Logs traffic data to a file:
+     - Lane ID
+     - Number of vehicles
+     - Average wait time
+     - Signal state
+     - Timestamp
+   - Appends each cycle for persistence
 
-Vehicle presence simulated using:
+6. **Error Handling**
+   - Detects impossible states (e.g., two greens)
+   - Protects against:
+     - Memory leaks
+     - Invalid pointer use
+     - Failed allocations
 
-Keyboard input, OR
+7. **User Interface**
+   - Interactive text menu:
+     - Show current signal states
+     - Display traffic statistics
+     - Trigger manual override (emergency mode)
+     - Export logs
 
-Randomized vehicle arrival generator.
+---
 
-Vehicle counts stored using dynamic structures.
+## 📌 Project 2: Automated System Monitoring Shell Script
 
-3. Dynamic Memory Management
-
-Each lane maintains a dynamic queue of vehicles using:
-
-malloc()
-
-realloc()
-
-free()
-
-Safe memory handling with null-checking.
-
-4. Simulated Concurrency
-
-Multiple "tasks" run concurrently by:
-
-Checking timestamps instead of using sleep().
-
-Example tasks:
-
-Traffic light control
-
-Vehicle addition/removal
-
-Data logging
-
-Allows “parallel” simulation inside a single-threaded C program.
-
-5. Logging & File Handling
-
-Logs traffic data to a file:
-
-Lane ID
-
-Number of vehicles
-
-Average wait time
-
-Signal state
-
-Timestamp
-
-Appends each cycle for persistence.
-
-6. Error Handling
-
-Detects impossible states (e.g., two greens).
-
-Protects against:
-
-Memory leaks
-
-Invalid pointer use
-
-Failed allocations
-
-7. User Interface
-
-Interactive text menu:
-
-Show current signal states
-
-Display traffic statistics
-
-Trigger manual override (emergency mode)
-
-Export logs
-
-Q📌 Project 2: Automated System Monitoring Shell Script
-Overview
-
+### Overview
 A Linux shell script that monitors system resources and provides an interactive menu to view system status, set alert thresholds, and manage logs.
 
-Key Features
+### Key Features
 
-Resource Monitoring
+- **Resource Monitoring**
+  - CPU, memory, disk, running processes
+  - Uses `top`, `free`, `df`, `ps`
+  
+- **Automation & Alerts**
+  - User-defined thresholds
+  - Auto-logging of warnings
 
-CPU, memory, disk, running processes.
+- **Logging**
+  - All data timestamped and saved to a log file
+  - Options to view or clear logs
 
-Uses top, free, df, ps.
+- **Interactive Menu**
+  - View system status
+  - Set thresholds
+  - View logs
+  - Clear logs
+  - Exit
 
-Automation & Alerts
+- **Robustness**
+  - Graceful handling of invalid inputs
+  - Missing command detection
 
-User-defined thresholds.
+**Technologies:** Bash scripting, Cron or loop-based scheduling
 
-Auto-logging of warnings.
+---
 
-Logging
+## 📌 Project 3: Student Management System using Structures (C)
 
-All data timestamped and saved to a log file.
-
-Options to view or clear logs.
-
-Interactive Menu
-
-View system status
-
-Set thresholds
-
-View logs
-
-Clear logs
-
-Exit
-
-Robustness
-
-Graceful handling of invalid inputs.
-
-Missing command detection.
-
-Technologies
-
-Bash scripting
-
-Cron or loop-based scheduling
-
-📌 Project 3: Student Management System using Structures (C)
-Overview
-
+### Overview
 A complete student information system using structures, dynamic memory, file handling, searching, sorting, and statistical analysis.
 
-Key Features
+### Key Features
 
-Dynamic Data Structures
+- **Dynamic Data Structures**
+  - Student records: ID, name, age, course, grades[], GPA
+  - Uses `malloc`, `realloc`, `free`
 
-Student records: ID, name, age, course, grades[], GPA.
+- **Persistent Storage**
+  - Save/load records using text or binary files
+  - File integrity and error handling
 
-Uses malloc, realloc, free.
+- **CRUD Operations**
+  - Add, display, update, delete student records
+  - All changes synced to file
 
-Persistent Storage
+- **Searching & Sorting**
+  - Search by ID or name (linear / binary search)
+  - Sort by GPA, name, or ID (Bubble / Insertion / Merge Sort)
 
-Save/load records using text or binary files.
+- **Analytics**
+  - GPA statistics: average, median, highest, lowest
+  - Reports:
+    - Top N students
+    - Best per course
+    - Course-wise averages
 
-File integrity and error handling.
+- **User Interface**
+  - Menu-driven CLI system
 
-CRUD Operations
+**Technologies:** C programming, Structures & memory management, File I/O
 
-Add, display, update, delete student records.
+---
 
-All changes synced to file.
+## 📌 Project 4: Dynamic Math & Data Processing Engine (C)
 
-Searching & Sorting
+### Overview
+A modular C engine using **function pointers** for dynamic runtime operation selection. Supports dataset modification and various math/data operations.
 
-Search by ID or name (linear / binary search).
+### Key Features
 
-Sort by GPA, name, or ID (Bubble / Insertion / Merge Sort).
+- **Dynamic Function Dispatch**
+  - Operations selected via function pointers:
+    - Sum
+    - Average
+    - Min / Max
+    - Search
+    - Ascending / descending sort
 
-Analytics
+- **Dynamic Memory**
+  - Dataset grows/shrinks at runtime using `malloc`, `realloc`, `free`
 
-GPA statistics: average, median, highest, lowest.
+- **Interactive Menu**
+  - Add/edit data
+  - Choose operations
+  - View results
 
-Reports:
+- **File Integration**
+  - Load dataset from file
+  - Save processed results
 
-Top N students
+- **Robustness**
+  - Handles invalid inputs
+  - Protects against empty datasets
+  - Guaranteed memory cleanup
 
-Best per course
+**Technologies:** C programming, Function pointers, File handling
 
-Course-wise averages
+---
 
-User Interface
+## 📌 Project 5: Multi-threaded Web Scraper (C with pthreads)
 
-Menu-driven CLI system.
+### Overview
+A simple but powerful multi-threaded web scraper that downloads multiple webpages in parallel using **POSIX threads**.
 
-Technologies
+### Key Features
 
-C programming
+- **POSIX Threads**
+  - Each URL is fetched in its own thread
+  - No synchronization required
 
-Structures & memory management
+- **Content Saving**
+  - Each thread stores HTML content in its own output file
 
-File I/O
-
-📌 Project 4: Dynamic Math & Data Processing Engine (C)
-Overview
-
-A modular C engine using function pointers for dynamic runtime operation selection. Supports dataset modification and various math/data operations.
-
-Key Features
-
-Dynamic Function Dispatch
-
-Operations selected via function pointers:
-
-Sum
-
-Average
-
-Min / Max
-
-Search
-
-Ascending / descending sort
-
-Dynamic Memory
-
-Dataset grows/shrinks at runtime using malloc, realloc, free.
-
-Interactive Menu
-
-Add/edit data
-
-Choose operations
-
-View results
-
-File Integration
-
-Load dataset from file
-
-Save processed results
-
-Robustness
-
-Invalid inputs
-
-Empty dataset protection
-
-Guaranteed memory cleanup
-
-Technologies
-
-C programming
-
-Function pointers
-
-File handling
-
-📌 Project 5: Multi-threaded Web Scraper (C with pthreads)
-Overview
-
-A simple but powerful multi-threaded web scraper that downloads multiple webpages in parallel using POSIX threads.
-
-Key Features
-
-POSIX Threads
-
-Each URL is fetched in its own thread.
-
-No synchronization required.
-
-Content Saving
-
-Each thread stores HTML content in its own output file.
-
-Error Handling
-
-Unreachable URL detection.
-
-Failed request handling.uit simulation
+- **Error Handling**
+  - Unreachable URL detection
+  - Failed request handling

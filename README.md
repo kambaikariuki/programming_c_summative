@@ -7,14 +7,13 @@ This repository contains five software projects demonstrating concepts such as *
 ## 📌 Project 1: Smart Traffic Control and Monitoring System (C Simulation)
 
 ### Overview
-This project simulates an **intelligent multi-intersection traffic control system** using the C programming language.  
-It models traffic behavior using data structures, dynamic memory, timers, and simulated concurrency (using non-blocking time checks with `clock()` or `time()`).  
-This project replicates embedded system behavior **without requiring physical hardware**.
+This project simulates a **traffic control system** using the C programming language.  
+It models traffic behavior using data structures, dynamic memory, timers, and simulated concurrency.
 
 ### Key Functionalities
 
 1. **Traffic Signal Simulation**
-   - Two or more intersections.
+   - Two intersections.
    - Each intersection uses:
      - Red / Yellow / Green states
      - Timers for each phase
@@ -22,7 +21,6 @@ This project replicates embedded system behavior **without requiring physical ha
 
 2. **Vehicle Detection Simulation**
    - Vehicle presence simulated using:
-     - Keyboard input, OR
      - Randomized vehicle arrival generator
    - Vehicle counts stored using dynamic structures
 
@@ -34,7 +32,6 @@ This project replicates embedded system behavior **without requiring physical ha
    - Safe memory handling with null-checking
 
 4. **Simulated Concurrency**
-   - Multiple "tasks" run concurrently by checking timestamps instead of using `sleep()`
    - Example tasks:
      - Traffic light control
      - Vehicle addition/removal
@@ -45,13 +42,11 @@ This project replicates embedded system behavior **without requiring physical ha
    - Logs traffic data to a file:
      - Lane ID
      - Number of vehicles
-     - Average wait time
      - Signal state
      - Timestamp
    - Appends each cycle for persistence
 
 6. **Error Handling**
-   - Detects impossible states (e.g., two greens)
    - Protects against:
      - Memory leaks
      - Invalid pointer use
@@ -121,14 +116,9 @@ A complete student information system using structures, dynamic memory, file han
 
 - **Searching & Sorting**
   - Search by ID or name (linear / binary search)
-  - Sort by GPA, name, or ID (Bubble / Insertion / Merge Sort)
 
 - **Analytics**
   - GPA statistics: average, median, highest, lowest
-  - Reports:
-    - Top N students
-    - Best per course
-    - Course-wise averages
 
 - **User Interface**
   - Menu-driven CLI system
